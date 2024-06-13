@@ -1,4 +1,5 @@
 import { InformationLayout } from './InformationLayout';
+import PropTypes from 'prop-types';
 
 export function Information({ isDraw, isGameEnded, currentPlayer }) {
 	return (
@@ -13,3 +14,9 @@ export function Information({ isDraw, isGameEnded, currentPlayer }) {
 		</>
 	);
 }
+
+Information.propTypes = {
+	isDraw: PropTypes.bool,
+	currentPlayer: PropTypes.string,
+	isGameEnded: PropTypes.bool,
+};

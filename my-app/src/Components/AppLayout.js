@@ -1,6 +1,7 @@
 import { Field } from './Field/Field';
 import { Information } from './Information/Information';
 import styles from './app.module.css';
+import PropTypes from 'prop-types';
 
 export function AppLayout({ ...state }) {
 	return (
@@ -19,3 +20,15 @@ export function AppLayout({ ...state }) {
 		</>
 	);
 }
+
+AppLayout.propTypes = {
+	isDraw: PropTypes.bool,
+	currentPlayer: PropTypes.string,
+	setCurrentPlayer: PropTypes.func,
+	isGameEnded: PropTypes.bool,
+	setIsGameEnded: PropTypes.func,
+	setIsDraw: PropTypes.func,
+	field: PropTypes.array,
+	setFiels: PropTypes.func,
+	handleClickReset: PropTypes.func,
+};
